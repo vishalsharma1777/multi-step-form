@@ -413,6 +413,7 @@ p {
 .buttons:hover {
     background-color: var(--attribution-color);
 }
+
 .goBack {
     align-self: center;
     cursor: pointer;
@@ -482,4 +483,266 @@ p {
 
 input:checked+.slider:before {
     transform: translateX(2rem);
+}
+
+
+/* RESPONSIVENESS CHANGES */
+
+@media screen and (max-width:1250px) {
+    .planImage {
+        margin-bottom: var(--margin-medium);
+    }
+
+    .cardName {
+        font-size: var(--normal-font);
+    }
+
+}
+
+@media screen and (max-width:1150px) {
+    .container {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+    /* body{ background-color: red;} */
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--margin-medium);
+        margin-bottom: var(--margin-large);
+    }
+
+    .cards label:nth-child(3) {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+
+    .addOnDescription {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    .mainContainer {
+        display: flex;
+        justify-content: center;
+        place-items: unset;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0;
+        background-color: var(--Magnolia);
+    }
+
+    aside {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background-position: 90% 85%;
+        border-radius: unset;
+    }
+
+    .pageContainers {
+        z-index: 1;
+        width: 100%;
+        height: calc(100vh - 10rem);
+        position: absolute;
+        top: 10rem;
+        background: transparent;
+    }
+
+    .withHeadingForm {
+        top: 10rem;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: var(--corner-radius);
+        padding: var(--padding-large);
+        background: var(--Alabaster);
+    }
+
+    .stepDescription {
+        display: none;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .planCard {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stepCircle {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 2rem;
+    }
+
+    .belowButtons {
+        width: 90%;
+        margin: 0 auto;
+        /* padding: var(--padding-large); */
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        background-color: var(--Alabaster);
+
+    }
+
+    .stepLastButtons {
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width:450px) {
+    .headingTitle {
+        font-size: var(--small-heading);
+        line-height: var(--small-heading);
+        margin-bottom: 1rem;
+
+    }
+
+    .pageContainers {
+        padding: 2.5rem;
+    }
+
+    .withHeadingForm {
+        padding: .5rem;
+    }
+
+    .belowButtons {
+        margin-bottom: 5rem;
+    }
+
+    .planCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .planImage {
+        align-self: center;
+    }
+
+    .cardName {
+        font-size: 1.5rem;
+    }
+
+    .bottomToggle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addOnCard {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .checkbox{
+        margin-bottom: 2rem;
+    }
+
+    .addOnDescription {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .addOnName {
+        margin-left: unset;
+    }
+
+    .pricesSide {
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .addOnSelectedPrice,
+    .totalPrice,
+    .basePrice {
+        position: absolute;
+        right: 0;
+        margin-right: unset;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-right: unset;
+    }
+
+    .addOnSelectedPrice {
+        left: 1rem;
+        bottom: -2rem;
+
+    }
+
+    .extraPlan {
+        margin-bottom: 3rem;
+    }
+
+    .basePrice {
+        margin-top: 3rem;
+    }
+
+    .totalPrice {
+        font-size: var(--normal-font);
+        font-weight: var(--medium-font-weight);
+    }
+
+    .mainPlanName {
+        font-size: .5rem;
+        bottom: 0;
+        left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* THANK YOU CONTAINER */
+    .thankyouMessage {
+        width: 100%;
+    }
+
+    .values {
+        text-transform: capitalize;
+        font-weight: var(--medium-font-weight);
+        color: var(--Marine-blue);
+    }
+
+    .thankYouHeading {
+        font-size: var(--small-heading);
+        font-weight: var(--large-font-weight);
+        margin-bottom: var(--margin-medium);
+        color: var(--Marine-blue);
+    }
+
+    .message {
+        width: 95%;
+        text-align: center;
+        /* line-height: var(--normal-line-height); */
+    }
+
+    .buttons{
+        width: 100%;
+        height: 3rem;
+    }
+
 }
