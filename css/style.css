@@ -9,3 +9,82 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 }
+
+body {
+    background-color: var(--Magnolia);
+}
+
+/* MAIN CONTAINER */
+.mainContainer {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* CONTAINER */
+.container {
+    width: 65%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: var(--Alabaster);
+    padding: var(--padding-medium);
+    border-radius: var(--corner-radius);
+}
+
+/* ASIDE */
+aside {
+    grid-column: 1/2;
+    background: url("../assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--corner-radius);
+    padding: var(--padding-medium);
+}
+
+/* COMPLETE EACH STEP SECTION */
+.stepSide {
+    display: flex;
+    align-items: center;
+    margin-left: var(--margin-medium);
+}
+
+/* STEP CIRCLE ONE WHICH SHOWS STEPS */
+.stepCircle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--Light-blue);
+    border: 2px solid var(--Light-blue);
+}
+
+/* STEP CIRCLE ONE WHICH SHOWS CURRENT STEP */
+.currentStep {
+    color: var(--Marine-blue);
+    background-color: var(--Light-blue);
+}
+
+
+/* STEP DESCRIPTIONS NUMBER AND NAME */
+.stepDescription {
+    padding: var(--padding-medium);
+}
+
+.stepNumber {
+    font-size: var(--attribution-font);
+    font-weight: var(--small-font-weight);
+    color: var(--White);
+
+}
+
+.stepName {
+    font-weight: var(--medium-font-weight);
+    color: var(--White);
+}
+
+
