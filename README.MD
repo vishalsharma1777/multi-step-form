@@ -6,15 +6,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://vishalsharma1777.github.io/portfolio-project/">
+    <a href="https://multi-step-form-gray-one.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/vishalsharma1777/portfolio-project">
+    <a href="https://github.com/vishalsharma1777/multi-step-form">
       Solution
     </a>
     <span> | </span>
-    <a href="https://www.figma.com/proto/q4Fk9BZ4ptOmGxli1QpPAf/design-portfolio?node-id=0-1176&scaling=min-zoom&page-id=0%3A1">
+    <a href="https://gitlab.com/mountblue/js/multi-step-form">
       Challenge
     </a>
   </h3>
@@ -54,6 +54,24 @@ Users should be able to:
   - A step is submitted, but no selection has been made
 
 ### Screenshots
+
+HOME PAGE
+![home page](./screenshots/homepage.png){width=300px height=200px}
+
+
+PLAN PAGE
+![plan page](./screenshots/planSelcetDesktopMonthly.png)![plan page](./screenshots/planSelcetTablet.png)
+
+Add Ons PAGE
+![add ons page](./screenshots/AddOns.png)
+
+Summary PAGE
+![summary page](./screenshots/Submarry.png)
+
+Thank You PAGE
+![thank you page](./screenshots/thankYou.png)
+
+
 
 
 ### Links
