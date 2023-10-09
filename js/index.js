@@ -26,6 +26,17 @@ const addOn = document.querySelectorAll('[data-whichAddOn]');
 const yo = document.querySelector('[data-whichAddOn]');
 const addOnCard = document.querySelector('.addOnCards');
 
+// STEP 4 IMPORTS
+const submarry = document.querySelector('[data-formName="summaryContainer"]');
+const submarryAddOns = document.getElementById('addOnSelected');
+const submarryPlanName = document.getElementById('mainPlanName');
+const confirm = document.getElementById('confirmButton');
+const submarryPlanPrice = document.getElementById('basePrice');
+const totalfooter = document.getElementById('totalName');
+const totalValuefooter = document.getElementById('totalPrice');
+const summaryGoBack = document.querySelector('[data-goBack="backToAddOns"]');
+const summaryChangeButton = document.getElementById('change');
+
 
 // GO BACK BUTTONS IMPORT
 const plansGoBack = document.querySelector('[data-goBack="backToSignup"]');
@@ -164,6 +175,62 @@ function selectedBackGround(collectionToPerform) {
     })
 }
 
+// ARRAY SUM FUNCTION
+function arraySum(array) {
+    return array.reduce((a, b) => +a + +b, 0);
+}
+
+// MAKE BILL
+function makeBill() {
+    // RETRIVING DATA FROM ALL DETAILS MAP
+    const userPlan = allDetails.get('plan');
+    const userDuration = allDetails.get('duration');
+    const userBaseprice = allDetails.get('price');
+    const userAddons = allDetails.get('addOns');
+    let addOns = Object.entries(userAddons);
+    const addOnsValues = Object.values(userAddons);
+    const totalToPay = +userBaseprice + arraySum(addOnsValues);
+
+    // CHANGING THE SUMMARY MAIN INNER HTML
+    submarryPlanName.textContent = `${userPlan} ( ${userDuration} )`;
+    submarryAddOns.innerHTML = '';
+
+    // IF NO ADDONS SELECTED
+    if (addOns.length == 0) {
+        if (userDuration === 'monthly') {
+            submarryPlanPrice.textContent = `$${userBaseprice}/mo`;
+            totalfooter.textContent = `Total`;
+            totalValuefooter.textContent = `$${totalToPay}/mo`;
+        } else {
+            submarryPlanPrice.textContent = `$${userBaseprice}/yr`;
+            totalfooter.textContent = `Total`;
+            totalValuefooter.textContent = `$${totalToPay}/yr`;
+        }
+    }
+    // APPENDING DIVS OF ADDONS
+    addOns.forEach((addOn) => {
+        const addOnName = addOn[0];
+        const addOnPrice = addOn[1];
+        const addOnDiv = document.createElement('div');
+        addOnDiv.classList.add('mainPlan', 'extraPlan');
+        if (userDuration === 'monthly') {
+            submarryPlanPrice.textContent = `$${userBaseprice}/mo`;
+            totalfooter.textContent = `Total ( per month )`;
+            totalValuefooter.textContent = `$${totalToPay}/mo`;
+            addOnDiv.innerHTML = `
+            <div class="addOnSelectedName">${addOnName}</div>
+            <div class="addOnSelectedPrice">+$${addOnPrice}/mo</div>`;
+        } else {
+            submarryPlanPrice.textContent = `$${userBaseprice}/yr`;
+            totalfooter.textContent = `Total ( per year )`;
+            totalValuefooter.textContent = `$${totalToPay}/yr`;
+            addOnDiv.innerHTML = `
+            <div class="addOnSelectedName">${addOnName}</div>
+            <div class="addOnSelectedPrice">+$${addOnPrice}/yr</div>`;
+        }
+        submarryAddOns.appendChild(addOnDiv);
+    });
+}
 
 // EVENT LISTENERS
 //NAME INPUT
@@ -244,6 +311,7 @@ addOnsForm.addEventListener('submit', (e) => {
     addOnObjects = Object.fromEntries(addOnObjects);
     allDetails.set('addOns', addOnObjects);
     changeStepAndGoBack('3', '4', 'summaryContainer', 'addOnsContainer');
+    makeBill();
 });
 
 
@@ -256,4 +324,13 @@ plansGoBack.addEventListener('click', () => {
 // ADDS ON GO BACK
 addsOnGoBack.addEventListener('click', () => {
     changeStepAndGoBack('3', '2', 'planContainer', 'addOnsContainer');
+});
+// SUMMARY GO BACK
+summaryGoBack.addEventListener('click', () => {
+    changeStepAndGoBack('4', '3', 'addOnsContainer', 'summaryContainer');
+});
+
+// CHANGE BUTTON
+summaryChangeButton.addEventListener('click', () => {
+    changeStepAndGoBack('4', '2', 'planContainer', 'summaryContainer');
 });
