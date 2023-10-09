@@ -395,6 +395,10 @@ p {
     justify-self: flex-end;
 }
 
+.stepLastButtons {
+    align-self: center;
+}
+
 .buttons {
     cursor: pointer;
     width: 8rem;

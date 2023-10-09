@@ -34,13 +34,16 @@ const confirm = document.getElementById('confirmButton');
 const submarryPlanPrice = document.getElementById('basePrice');
 const totalfooter = document.getElementById('totalName');
 const totalValuefooter = document.getElementById('totalPrice');
-const summaryGoBack = document.querySelector('[data-goBack="backToAddOns"]');
-const summaryChangeButton = document.getElementById('change');
 
+// STEP 5 IMPORTS
+const thankYouContainer = document.getElementById('finalMessage');
+const finalButton = document.getElementById('finalButton');
 
 // GO BACK BUTTONS IMPORT
 const plansGoBack = document.querySelector('[data-goBack="backToSignup"]');
 const addsOnGoBack = document.querySelector('[data-goBack="backToPlan"]');
+const summaryGoBack = document.querySelector('[data-goBack="backToAddOns"]');
+const summaryChangeButton = document.getElementById('change');
 
 
 //GLOBAL VARIABLES
@@ -314,6 +317,41 @@ addOnsForm.addEventListener('submit', (e) => {
     makeBill();
 });
 
+//STEP 4 CONFIRM BUTTON
+confirm.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Your plan has been confirmed');
+    addMessage();
+    changeStepAndGoBack('4', '4', 'thankYouContainer', 'summaryContainer');
+});
+
+
+// STEP 5 THANK YOU BUTTON
+function addMessage() {
+    const name = allDetails.get('name');
+    const email = allDetails.get('email');
+    const number = allDetails.get('number');
+    const userPlan = allDetails.get('plan');
+    const userDuration = allDetails.get('duration');
+    const userBaseprice = allDetails.get('price');
+    const userAddons = allDetails.get('addOns');
+    let addOns = Object.keys(userAddons);
+    const addOnsValues = Object.values(userAddons);
+    const totalToPay = +userBaseprice + arraySum(addOnsValues);
+
+    if (addOns.length == 0) {
+        addOns = 'None';
+
+    }
+    thankYouContainer.innerHTML = `Thank you <span class="values">${name}</span>! 
+    Thanks for confirming your subscription of <span class="values">${userPlan}</span> 
+    for <span class="values">${userDuration}</span> with base price of 
+    <span class="values">$${userBaseprice}</span> only! We hope you have fun
+    with addons of <span class="values">${addOns}</span> for using our platform.<br> 
+    Expect a mail on <span class="values">${email}</span> or <br> a call on <span class="values">${number}</span> 
+    for further details. <p>Your total bill is <span class="values">$${totalToPay}</span> only!<p>`
+}
+
 
 // GO BACK BUTTONS
 // PLAN GO BACK
@@ -333,4 +371,9 @@ summaryGoBack.addEventListener('click', () => {
 // CHANGE BUTTON
 summaryChangeButton.addEventListener('click', () => {
     changeStepAndGoBack('4', '2', 'planContainer', 'summaryContainer');
+});
+
+// FINAL BUTTON refresh the page
+finalButton.addEventListener('click', () => {
+    location.reload();
 });
