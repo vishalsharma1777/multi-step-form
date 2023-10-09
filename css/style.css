@@ -98,14 +98,14 @@ aside {
 }
 
 .singupContainer {
-    display: none;
+    display: flex;
 }
 
 .planContainer,
 .addOnsContainer,
 .summaryContainer,
 .thankYouContainer {
-    display: flex;
+    display: none;
 }
 
 /*HEADING*/
