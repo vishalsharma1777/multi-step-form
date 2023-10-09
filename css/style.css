@@ -351,6 +351,36 @@ p {
     border-radius: var(--corner-radius);
 }
 
+/* THANK YOU CONTAINER */
+
+.thankyouMessage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--Cool-gray);
+}
+
+.values {
+    text-transform: capitalize;
+    font-weight: var(--medium-font-weight);
+    color: var(--Marine-blue);
+}
+
+.thankYouHeading {
+    font-size: var(--large-heading);
+    font-weight: var(--large-font-weight);
+    margin-bottom: var(--margin-medium);
+    color: var(--Marine-blue);
+}
+
+.message {
+    width: 95%;
+    text-align: center;
+    /* line-height: var(--normal-line-height); */
+}
+
 /* BUTTONS */
 .belowButtons {
     display: flex;
