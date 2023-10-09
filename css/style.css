@@ -98,6 +98,13 @@ aside {
 }
 
 .singupContainer {
+    display: none;
+}
+
+.planContainer,
+.addOnsContainer,
+.summaryContainer,
+.thankYouContainer {
     display: flex;
 }
 
@@ -164,6 +171,67 @@ aside {
     font-size: var(--attribution-font);
 }
 
+
+/* PLAN CONTAINER */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--margin-medium);
+    margin-bottom: var(--margin-large);
+}
+
+.planCard {
+    border-radius: var(--corner-radius);
+    outline: 1px solid var(--Cool-gray);
+    padding: var(--padding-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+/* HIDE THE RADIO BUTTON OF CARD */
+.radiox {
+    visibility: hidden;
+}
+
+.cardName {
+    font-size: var(--extra-small-heading);
+    font-weight: var(--medium-font-weight);
+    color: var(--Marine-blue);
+    margin-bottom: var(--margin-medium);
+}
+
+.pricesbottom {
+    color: var(--Cool-gray);
+    height: var(--medium-heading);
+}
+
+.yearprice {
+    color: var(--Marine-blue);
+}
+
+.bottomToggle {
+    grid-column: 1/-1;
+    gap: var(--margin-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Magnolia);
+    margin-top: var(--margin-large);
+}
+
+
+.planCard:hover,
+.addOnCard:hover {
+    cursor: pointer;
+    background-color: var(--hover-blue);
+    outline: 2px solid var(--attribution-color);
+}
+
+.planImage {
+    width: 3rem;
+    margin-bottom: var(--bottom-margin);
+}
+
 /* BUTTONS */
 .belowButtons {
     display: flex;
@@ -191,4 +259,74 @@ aside {
 
 .buttons:hover {
     background-color: var(--attribution-color);
+}
+.goBack {
+    align-self: center;
+    cursor: pointer;
+    color: var(--Cool-gray);
+}
+
+.goBack:hover {
+    color: var(--Marine-blue);
+}
+
+
+/* DISPLAY YEARLY OR MONTHLY */
+.toggleDisplay {
+    display: none;
+}
+
+/* CHANGING TOGGLE DURATION CARD  */
+.togglecolor {
+    color: var(--Cool-gray)
+}
+
+/* TOGGLE FOR PLAN OR CARD SELECTED */
+.selected {
+    background-color: var(--selected-blue);
+    outline: 2px solid var(--attribution-color);
+}
+
+
+/* TOGGLE CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marine-blue);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 15%;
+    left: 8%;
+    background-color: var(--White);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider:before {
+    transform: translateX(2rem);
 }
