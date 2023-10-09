@@ -88,3 +88,107 @@ aside {
 }
 
 
+.pageContainers {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.singupContainer {
+    display: flex;
+}
+
+/*HEADING*/
+.heading {
+    margin-top: 2rem;
+    margin-bottom: var(--bottom-margin);
+}
+
+.headingTitle {
+    color: var(--Marine-blue);
+    font-size: var(--small-heading);
+    font-weight: var(--medium-font-weight);
+    line-height: var(--small-heading-line-height);
+}
+
+.headingDescription {
+    color: var(--Cool-gray);
+}
+
+/* SIGNUP FORM */
+.inputFeilds {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin-medium) 0;
+}
+
+.userInputs {
+    border-radius: var(--corner-radius);
+    font-size: var(--normal-font);
+    font-weight: var(--medium-font-weight);
+    padding: var(--padding-medium);
+    border: 1px solid var(--Cool-gray);
+    margin-top: var(--margin-small);
+}
+
+.inputFeilds {
+    margin-bottom: var(--margin-large);
+}
+
+.nameInput:hover,
+.emailInput:hover,
+.numberInput:hover {
+    cursor: pointer;
+    outline: 1px solid var(--Marine-blue);
+}
+
+.nameInput:focus,
+.emailInput:focus,
+.numberInput:focus {
+    outline: none;
+}
+
+.withWarning {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.wrongInput {
+    display: none;
+    color: var(--Strawberry-red);
+    font-weight: var(--large-font-weight);
+    font-size: var(--attribution-font);
+}
+
+/* BUTTONS */
+.belowButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--margin-medium);
+    margin-bottom: var(--margin-medium);
+}
+
+.step1Buttons {
+    justify-content: flex-end;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.buttons {
+    cursor: pointer;
+    width: 8rem;
+    font-size: var(--normal-font);
+    padding: var(--padding-medium);
+    border-radius: var(--corner-radius);
+    border: none;
+    color: var(--White);
+    background-color: var(--Marine-blue);
+}
+
+.buttons:hover {
+    background-color: var(--attribution-color);
+}
