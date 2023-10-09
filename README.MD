@@ -6,15 +6,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://multi-step-form-gray-one.vercel.app/">
+    <a href="https://multi-step-form-gray-one.vercel.app/" target="_blank">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/vishalsharma1777/multi-step-form">
+    <a href="https://github.com/vishalsharma1777/multi-step-form" target="_blank">
       Solution
     </a>
     <span> | </span>
-    <a href="https://gitlab.com/mountblue/js/multi-step-form">
+    <a href="https://gitlab.com/mountblue/js/multi-step-form" target="_blank">
       Challenge
     </a>
   </h3>
