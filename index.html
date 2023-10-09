@@ -92,10 +92,97 @@
                 </div>
             </div>
 
-            
+            <!-- PLAN CONTAINER -->
+            <div class="planContainer pageContainers" data-container="planContainer">
+                <div class="withHeadingForm">
+                    <div class="heading">
+                        <div class="headingTitle">Select your plan</div>
+                        <div class="headingDescription">
+                            You have the option of monthly or yearly billing.
+                        </div>
+                    </div>
+                    <form class="planSelector forms" id="planSelector" data-formName="planSelect">
+                        <div class="cards">
+
+                            <!-- ARCADE PLAN CARD -->
+                            <label for="arcade" class="radio">
+                                <div class="planCard selected" data-cardName="arcade">
+                                    <img src="./assets/images/icon-arcade.svg" class="planImage" />
+                                    <input type="radio" class="radiox" id="arcade" name="plan" value="arcade"
+                                        data-priceMonthly="9" data-priceYearly="90" checked data-whichPlan="arcade"
+                                        data-duration="monthly" />
+                                    <div>
+                                        <div class="cardName">Arcade</div>
+                                        <div class="planPriceMonthly pricesbottom">$9/mo</div>
+                                        <div class="planPriceYearly pricesbottom toggleDisplay">$90/yr<div
+                                                class="yearprice">2
+                                                months free
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- ADVANCED PLAN CARD -->
+                            <label for="advanced">
+                                <div class="planCard" data-cardName="advanced">
+                                    <img src="./assets/images/icon-advanced.svg" class="planImage" />
+                                    <input type="radio" class="radiox" id="advanced" name="plan" value="advanced"
+                                        data-priceMonthly="12" data-priceYearly="120" data-whichPlan="advanced"
+                                        data-duration="monthly" />
+                                    <div>
+                                        <div class="cardName">Advanced</div>
+                                        <div class="planPriceMonthly pricesbottom">$12/mo</div>
+                                        <div class="planPriceYearly pricesbottom toggleDisplay">$120/yr<div
+                                                class="yearprice">2
+                                                months free
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- PRO PLAN CARD -->
+                            <label for="pro">
+                                <div class="planCard pro" data-cardName="pro">
+                                    <img src="./assets/images/icon-pro.svg" class="planImage" />
+                                    <input type="radio" id="pro" class="radiox" name="plan" value="pro"
+                                        data-priceMonthly="15" data-priceYearly="150" data-whichPlan="pro"
+                                        data-duration="monthly" />
+                                    <div>
+                                        <div class="cardName">Pro</div>
+                                        <div class="planPriceMonthly pricesbottom">$15/mo</div>
+                                        <div class="planPriceYearly pricesbottom toggleDisplay">$150/yr<div
+                                                class="yearprice">2
+                                                months free
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <div class="bottomToggle">
+                                <div id="monthlyToggle" class="monthlyToggle">Monthly</div>
+                                <label class="switch">
+                                    <input class="form-check-input" type="checkbox" id="priceToggler">
+                                    <span class="slider"></span>
+                                </label>
+                                <div id="yearlyToggle" class="yearlyToggle togglecolor">Yearly</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="step2Buttons belowButtons">
+                    <div class="goBack" id="goBack" data-goBack="backToSignup">Go Back</div>
+                    <button type="submit" form="planSelector" id="step2button" class="step2button buttons">
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
-    <script src = './js/index.js'></script>
+    <script src='./js/index.js'></script>
 </body>
 
 </html>
