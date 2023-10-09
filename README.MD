@@ -53,25 +53,22 @@ Users should be able to:
 
 ### Screenshots
 
-HOME PAGE
+
 <div>
 <img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/homepage.png"  width="400" height="400" />
 <img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/planSelcetDesktopMonthly.png"  width="400" height="400" />
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/planSelcetDesktopYearly.png"  width="400" height="400" />
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/AddOns.png"  width="400" height="400" />
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/Submarry.png"  width="400" height="400" />
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/thankYou.png"  width="400" height="400" />
+
 </div>
 
-Add Ons PAGE
-![add ons page](./screenshots/AddOns.png)
-
-Summary PAGE
-![summary page](./screenshots/Submarry.png)
-
-Thank You PAGE
-![thank you page](./screenshots/thankYou.png)
 
 #### Mobile View
 
 HOME PAGE
-![home page](./screenshots/mobilesignup.jpeg)
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots./screenshots/mobilesignup.jpeg" width="200" height="400" />
 
 PLAN PAGE
 ![plan page](./screenshots/mobileplan.jpeg)
