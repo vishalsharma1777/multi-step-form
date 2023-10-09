@@ -232,7 +232,57 @@ aside {
     margin-bottom: var(--bottom-margin);
 }
 
+/* ADDONS CONTAINER */
+.addOnCards {
+    display: flex;
+    flex-direction: column;
+}
 
+.addOnCard {
+    display: flex;
+    position: relative;
+    padding: var(--padding-medium);
+    outline: 2px solid var(--Cool-gray);
+    border-radius: var(--corner-radius);
+    margin-bottom: var(--margin-medium);
+    align-items: center;
+}
+
+input[type=checkbox] {
+    accent-color: var(--Purplish-blue);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.addOnName {
+    margin-left: var(--margin-large);
+    display: flex;
+    align-items: center;
+}
+
+.addOnHeading {
+    font-weight: var(--large-font-weight);
+    color: var(--Marine-blue);
+}
+
+.addOnDescription {
+    /* width: 80%; */
+    color: var(--Cool-gray);
+    margin-top: var(--margin-small);
+}
+
+.pricesSide,
+.addOnSelectedPrice,
+.totalPrice,
+.basePrice,
+.total {
+    position: absolute;
+    right: 0;
+    color: var(--Purplish-blue);
+    font-weight: var(--small-font-weight);
+    padding-right: var(--padding-medium);
+
+}
 
 /* BUTTONS */
 .belowButtons {
