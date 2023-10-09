@@ -47,6 +47,52 @@
                     </div>
                 </div>
             </aside>
+
+            <!-- SIGNUP CONTAINER -->
+            <div class="singupContainer pageContainers" data-container="singupContainer">
+                <div class="withHeadingForm">
+                    <div class="heading">
+                        <div class="headingTitle">Personal info</div>
+                        <div class="headingDescription">
+                            Please provide your name, email address, and phone number.
+                        </div>
+                    </div>
+                    <form class="signUpForm forms" id="signUpForm" data-formName="signUp">
+                        <div class="name inputFeilds">
+                            <div class="withWarning">
+                                <label for="nameInput">Name</label>
+                                <label for="wrongInput" class="wrongInput" data-wrongInput="nameInputWarning"></label>
+                            </div>
+                            <input type="text" id="nameInput" pattern="[a-zA-Z ]{2,30}" class="nameInput userInputs"
+                                placeholder="e.g. Stephen King" data-userInputs="nameInput" />
+                        </div>
+                        <div class="email inputFeilds">
+                            <div class="withWarning">
+                                <label for="emailInput">Email Address</label>
+                                <label for="wrongInput" class="wrongInput" data-wrongInput="emailInputWarning"></label>
+                            </div>
+                            <input type="email" id="emailInput" class="emailInput userInputs"
+                                data-userInputs="emailInput" placeholder="e.g. stephenking@lorem.com" />
+                        </div>
+                        <div class="number inputFeilds">
+                            <div class="withWarning">
+                                <label for="numberInput">Phone Number</label>
+                                <label for="wrongInput" class="wrongInput" data-wrongInput="nameInputWarning"></label>
+                            </div>
+                            <input type="tel" pattern="[+][0-9]{1,3} [0-9]{3} [0-9]{3} [0-9]{3}" id="numberInput"
+                                class="nameInput userInputs" data-userInputs="numberInput"
+                                placeholder="e.g. +1 234 567 890" />
+                        </div>
+                    </form>
+                </div>
+                <div class="step1Buttons belowButtons">
+                    <button type="submit" form='signUpForm' id="signupButton" class="step1button buttons">
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
+            
         </div>
     </div>
 </body>
