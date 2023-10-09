@@ -33,9 +33,7 @@
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
+- [Acknowledgments](#acknowledgments)(#acknowledgments)
 
 ## Overview
 
@@ -56,11 +54,10 @@ Users should be able to:
 ### Screenshots
 
 HOME PAGE
-![home page](./screenshots/homepage.png){width=300px height=200px}
-
-
-PLAN PAGE
-![plan page](./screenshots/planSelcetDesktopMonthly.png)![plan page](./screenshots/planSelcetTablet.png)
+<div>
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/homepage.png"  width="400" height="400" />
+<img src="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/planSelcetDesktopMonthly.png"  width="400" height="400" />
+</div>
 
 Add Ons PAGE
 ![add ons page](./screenshots/AddOns.png)
@@ -71,52 +68,139 @@ Summary PAGE
 Thank You PAGE
 ![thank you page](./screenshots/thankYou.png)
 
+#### Mobile View
 
+HOME PAGE
+![home page](./screenshots/mobilesignup.jpeg)
 
+PLAN PAGE
+![plan page](./screenshots/mobileplan.jpeg)
+
+Add Ons PAGE
+![add ons page](./screenshots/mobileaddon.jpeg)
+
+Summary PAGE
+![summary page](./screenshots/mobilesubmary.jpeg)
+
+Thank You PAGE
+![thank you page](./screenshots/mobilethanku.jpeg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github link](https://github.com/vishalsharma1777/multi-step-form)
+- Live Site URL: [vercel site](https://multi-step-form-gray-one.vercel.app/)
 
 ## My process
 
 - I started with the mobile first approach and then moved to the desktop version.
+- I used the grid and flexbox to make the layout responsive.
+- I used the javascript to make the form interactive.
+- I used media queries to make the layout responsive.
+- DOM manipulation is used to make the form interactive.
+
 ### Built with
 
 - Semantic HTML5 markup
+- Document Object Model
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 
-
 ### What I learned
 
 - I learned how to use the grid and flexbox to make the layout responsive.
+- I learned how to use the DOM to make the form interactive.
+- Dom manipulation is used to make the form interactive.
 
+### HTML Use of Data Attributes
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<label for="largeStorage">
+  <div class="addOnCard" data-cardName="largeStorage">
+    <input
+      type="checkbox"
+      id="largeStorage"
+      class="checkbox"
+      data-priceMonthly="2"
+      data-priceYearly="20"
+      data-whichAddOn="Large Storage"
+      data-duration="monthly"
+    />
+    <div class="addOnName">
+      <div>
+        <div class="addOnHeading">Larger storage</div>
+        <div class="addOnDescription">Extra 1TB of cloud save</div>
+      </div>
+      <div class="planPriceMonthly pricesSide">+$2/mo</div>
+      <div class="planPriceYearly pricesSide toggleDisplay">$20/yr</div>
+    </div>
+  </div>
+</label>
 ```
 
+### CSS Use of Grid
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--margin-medium);
+    margin-bottom: var(--margin-large);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
+### CSS Use of Variables
+```css
+:root {
+    /* NEUTRAL COLORS */
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+
+    /*Typography*/
+    --attribution-font: 11px;
+    --small-font: .5rem;
+    --normal-font: 1rem;
+    --extra-small-heading: 1.5rem;
+}
 ```
+
+### JS Use of dataset
+```js
+// DATA MATCHER
+function dataMatcher(dataCollection, toCheck, dataValue) {
+    const divName = Array.from(dataCollection).filter((data) => {
+        return data.getAttribute(toCheck) === dataValue;
+    });
+    return divName[0];
+}
+
+// HANDLING STEP CHANGE AND CIRCLE ACTIVE
+function changeStepAndGoBack(circleToRemove, circleToAdd, stepToAddContainer, stepToRemoveContainer) {
+    const removeCircle = dataMatcher(circles, 'data-stepCircle', circleToRemove);
+    const addCircle = dataMatcher(circles, 'data-stepCircle', circleToAdd);
+    const stepToAdd = dataMatcher(steps, 'data-container', stepToAddContainer);
+    const stepToRemove = dataMatcher(steps, 'data-container', stepToRemoveContainer);
+
+    if (removeCircle && addCircle && stepToAdd && stepToRemove) {
+        removeCircle.classList.remove('currentStep');
+        addCircle.classList.add('currentStep');
+        stepToRemove.style.display = 'none';
+        stepToAdd.style.display = 'flex';
+    }
+}
+```
+
 
 ### Continued development
 
 - I want to learn more about the grid and flexbox and how to use them to make the layout responsive.
+- Connect it with a database to store the data.
+- Send email to the user after the form is submitted.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [W3Schools](https://www.w3schools.com/) - This helped me for css. I really liked this pattern and will use it going forward.
+- [MDN](https://developer.mozilla.org/en-US/) - This is an amazing article which helped me finally understand datsets and dom. I'd recommend it to anyone still learning this concept.
 
+## Acknowledgments
+I want to thank my mentors.
