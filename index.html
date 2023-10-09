@@ -180,6 +180,78 @@
                 </div>
             </div>
 
+            <!-- ADD ONS CONTAINER -->
+            <div class="addOnsContainer pageContainers" data-container="addOnsContainer">
+                <div class="withHeadingForm">
+                    <div class="heading">
+                        <div class="headingTitle">Pick add-ons</div>
+                        <div class="headingDescription">
+                            Add-ons help enhance your gaming experience.
+                        </div>
+                    </div>
+                    <form class="addOnSelector forms" id="addOnSelector" data-formName="addOnSelector">
+                        <div class="addOnCards">
+                            <!-- ONLINE SERVICE -->
+                            <label for="onlineService">
+                                <div class="addOnCard" data-cardName="onlineService">
+                                    <input type="checkbox" id="onlineService" class="checkbox" data-priceMonthly="1"
+                                        data-priceYearly="10" data-whichAddOn="Online Service"
+                                        data-duration="monthly" />
+                                    <div class="addOnName">
+                                        <div>
+                                            <div class="addOnHeading">Online service</div>
+                                            <div class="addOnDescription">Access to multiplayer games</div>
+                                        </div>
+                                        <div class="planPriceMonthly pricesSide">+$1/mo</div>
+                                        <div class="planPriceYearly pricesSide toggleDisplay">$10/yr</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- LARGE STORAGE -->
+                            <label for="largeStorage">
+                                <div class="addOnCard" data-cardName="largeStorage">
+                                    <input type="checkbox" id="largeStorage" class="checkbox" data-priceMonthly="2"
+                                        data-priceYearly="20" data-whichAddOn="Large Storage" data-duration="monthly" />
+                                    <div class="addOnName">
+                                        <div>
+                                            <div class="addOnHeading">Larger storage</div>
+                                            <div class="addOnDescription">Extra 1TB of cloud save</div>
+                                        </div>
+                                        <div class="planPriceMonthly pricesSide">+$2/mo</div>
+                                        <div class="planPriceYearly pricesSide toggleDisplay">$20/yr</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- CUSTOMIZABLE PROFILE -->
+                            <label for="customizableProfile">
+                                <div class="addOnCard" data-cardName="customizableProfile">
+                                    <input type="checkbox" id="customizableProfile" class="checkbox"
+                                        data-priceMonthly="2" data-priceYearly="20"
+                                        data-whichAddOn="Customizable Profile" data-duration="monthly" />
+                                    <div class="addOnName">
+                                        <div>
+                                            <div class="addOnHeading">Customizable Profile</div>
+                                            <div class="addOnDescription">Custom theme on your profile</div>
+                                        </div>
+                                        <div class="planPriceMonthly pricesSide">+$2/mo</div>
+                                        <div class="planPriceYearly pricesSide toggleDisplay">$20/yr</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="step3Buttons belowButtons">
+                    <div class="goBack" id="goBack" data-goBack="backToPlan">Go Back</div>
+                    <button type="submit" form="addOnSelector" id="step3button" class="step3button buttons">
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src='./js/index.js'></script>
