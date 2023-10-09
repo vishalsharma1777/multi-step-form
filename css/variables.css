@@ -1,0 +1,68 @@
+:root {
+    /* LAYOUT */
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    /* PRIMARY COLORS */
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --selected-blue: #eef7fa;
+    --hover-blue: #e4f9fa;
+    --Strawberry-red: hsl(354, 84%, 57%);
+    --attribution-color: hsl(228, 45%, 44%);
+
+    /* NEUTRAL COLORS */
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+    --Black: --black: hsl(0, 0%, 0%);
+
+    /*Typography*/
+    --attribution-font: 11px;
+    --small-font: .5rem;
+    --normal-font: 1rem;
+    --extra-small-heading: 1.5rem;
+    --small-heading: 2rem;
+    --medium-heading: 2.5rem;
+    --large-heading: 3rem;
+    --extra-large-heading: 3.5rem;
+    --paragraph-font: 1rem;
+
+    /* LINE HEIGHTS */
+    --paragraph-line-height: 1.5rem;
+    --small-line-height: 2rem;
+    --normal-line-height: 2.5rem;
+    --extra-small-heading-line-height: 3rem;
+    --small-heading-line-height: 3.5rem;
+    --medium-heading-line-height: 4rem;
+    --large-heading-line-height: 4.5rem;
+
+    /* FONT WEIGHTS */
+    --small-font-weight: 300;
+    --normal-font-weight: 400;
+    --medium-font-weight: 500;
+    --large-font-weight: 700;
+
+
+    /*Margins*/
+    --margin-small: 0.5rem;
+    --margin-medium: 1rem;
+    --margin-large: 1.5rem;
+    --bottom-margin: 3rem;
+    --big-margin: 5rem;
+
+    /*Paddings*/
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 1.5rem;
+    --big-padding: 5rem;
+
+
+    /* Radius */
+    --small-radius: 1rem;
+    --corner-radius: .5rem;
+}
