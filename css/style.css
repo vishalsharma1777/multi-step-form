@@ -284,6 +284,73 @@ input[type=checkbox] {
 
 }
 
+/* SUBMARRY CONTAINER */
+
+.addOnSelectedName,
+.movetoplans,
+.totalName {
+    color: var(--Cool-gray);
+}
+
+.movetoplans {
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: var(--margin-small);
+}
+
+.movetoplans:hover {
+    color: var(--Purplish-blue);
+}
+
+.addOnSelectedPrice {
+    font-weight: var(--large-font-weight);
+}
+
+.basePrice,
+
+p {
+    font-weight: var(--large-font-weight);
+    color: var(--Marine-blue);
+    text-transform: capitalize;
+}
+
+.total {
+    color: var(--Cool-gray);
+    background-color: var(--Alabaster);
+}
+
+.totalPrice {
+    font-size: var(--extra-small-heading);
+    font-weight: var(--medium-font-weight);
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--margin-large);
+}
+
+.mainPlan,
+.total,
+.totalName {
+    display: flex;
+    position: relative;
+
+    margin-bottom: var(--margin-small);
+    align-items: center;
+}
+
+.mainPlan {
+    padding: 1rem;
+}
+
+.services,
+.total {
+    background-color: var(--Magnolia);
+    padding: var(--padding-small);
+    border-radius: var(--corner-radius);
+}
+
 /* BUTTONS */
 .belowButtons {
     display: flex;
