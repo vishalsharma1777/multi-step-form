@@ -66,21 +66,13 @@ Users should be able to:
 
 
 #### Mobile View
-
-HOME PAGE
-<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots./screenshots/mobilesignup.jpeg" width="200" height="400" />
-
-PLAN PAGE
-![plan page](./screenshots/mobileplan.jpeg)
-
-Add Ons PAGE
-![add ons page](./screenshots/mobileaddon.jpeg)
-
-Summary PAGE
-![summary page](./screenshots/mobilesubmary.jpeg)
-
-Thank You PAGE
-![thank you page](./screenshots/mobilethanku.jpeg)
+<div>
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/mobilesignup.jpeg" width="200" height="400" />
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/mobileplan.jpeg" width="200" height="400" />
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/mobileaddon.jpeg" width="200" height="400" />
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/mobilesubmary.jpeg" width="200" height="400" />
+<img src ="https://github.com/vishalsharma1777/multi-step-form/blob/main/screenshots/mobilethanku.jpeg" width="200" height="400" />
+</div>
 
 ### Links
 
