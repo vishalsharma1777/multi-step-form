@@ -20,9 +20,16 @@ const yearlyToggle = document.getElementById('yearlyToggle');
 const monthlyToggle = document.getElementById('monthlyToggle');
 const durationToggle = document.getElementById('priceToggler');
 
+//STEP 3 IMPORTS
+const addOnsForm = document.querySelector('[data-formName="addOnSelector"]');
+const addOn = document.querySelectorAll('[data-whichAddOn]');
+const yo = document.querySelector('[data-whichAddOn]');
+const addOnCard = document.querySelector('.addOnCards');
+
 
 // GO BACK BUTTONS IMPORT
 const plansGoBack = document.querySelector('[data-goBack="backToSignup"]');
+const addsOnGoBack = document.querySelector('[data-goBack="backToPlan"]');
 
 
 //GLOBAL VARIABLES
@@ -173,6 +180,10 @@ cards.addEventListener('click', (e) => {
     selectedBackGround(plans);
 });
 
+addOnCard.addEventListener('click', (e) => {
+    selectedBackGround(addOn);
+});
+
 
 
 // SUBMITTIONS
@@ -211,10 +222,38 @@ planSelectorForm.addEventListener('submit', (e) => {
     changeStepAndGoBack('2', '3', 'addOnsContainer', 'planContainer');
 });
 
+//STEP 3 FORM SUBMIT -- ADDS ON SELECTOR FORM
+addOnsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const selectedAddOn = Array.from(addOn).filter((addOn) => {
+        return addOn.checked;
+    });
+    let addOnObjects = selectedAddOn.map((ele) => {
+        if (ele.getAttribute('data-duration') === 'monthly') {
+            return [
+                ele.getAttribute('data-whichAddOn'),
+                ele.getAttribute('data-priceMonthly')
+            ];
+        } else {
+            return [
+                ele.getAttribute('data-whichAddOn'),
+                ele.getAttribute('data-priceYearly')
+            ];
+        }
+    });
+    addOnObjects = Object.fromEntries(addOnObjects);
+    allDetails.set('addOns', addOnObjects);
+    changeStepAndGoBack('3', '4', 'summaryContainer', 'addOnsContainer');
+});
 
 
 // GO BACK BUTTONS
 // PLAN GO BACK
 plansGoBack.addEventListener('click', () => {
     changeStepAndGoBack('2', '1', 'singupContainer', 'planContainer');
+});
+
+// ADDS ON GO BACK
+addsOnGoBack.addEventListener('click', () => {
+    changeStepAndGoBack('3', '2', 'planContainer', 'addOnsContainer');
 });
